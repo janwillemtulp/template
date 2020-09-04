@@ -45,7 +45,18 @@ export default {
 			css: css => {
 				css.write('bundle.css');
 			}
-		}),
+    }),
+    
+    replace({
+      FOO: 'bar',
+
+      // 2 level deep object should be stringify
+      process: JSON.stringify({
+        env: {
+          isProd: production,
+        },
+      }),
+    }),
 
 		// If you have external dependencies installed from
 		// npm, you'll most likely need these plugins. In
