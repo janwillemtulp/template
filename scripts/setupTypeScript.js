@@ -55,9 +55,9 @@ const rollupConfigPath = path.join(projectRoot, "rollup.config.js")
 let rollupConfig = fs.readFileSync(rollupConfigPath, "utf8")
 
 // Edit imports
-rollupConfig = rollupConfig.replace(`'rollup-plugin-terser';`, `'rollup-plugin-terser';
-import sveltePreprocess from 'svelte-preprocess';
-import typescript from '@rollup/plugin-typescript';`)
+rollupConfig = rollupConfig.replace(`'rollup-plugin-terser'`, `'rollup-plugin-terser'\n
+import sveltePreprocess from 'svelte-preprocess'\n
+import typescript from '@rollup/plugin-typescript'`)
 
 // Replace name of entry point
 rollupConfig = rollupConfig.replace(`'src/main.js'`, `'src/main.ts'`)
