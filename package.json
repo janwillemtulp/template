@@ -23,8 +23,5 @@
     "dev": "rollup -c -w",
     "start": "sirv public -H 0.0.0.0",
     "deploy": "rollup -c && gh-pages -d public"
-  },
-  "dependencies": {
-    "npm-check-updates": "^9.1.0"
   }
 }
